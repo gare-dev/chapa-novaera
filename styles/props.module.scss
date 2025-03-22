@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+.mainBox {
+    height: 300px;
+    width: 200px;
+    border: 2px solid #c39152;
+    border-radius: 10px;
+    box-shadow: #c39152 -5px 5px;
+    z-index: 9999;
+    transition: 0.3s all ease-in-out;
+
+    .iconAndTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 2px;
+
+        .divTitle {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .title {
+            color: #ffffff;
+            font-size: 17px;
+
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+    }
+
+    .textDiv {
+        height: 100%;
+        width: 85%;
+
+        .textProps {
+            color: #fff;
+            font-family: "Cabin", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+.mainBox:hover {
+    transform: translate(2%, -2%);
+    box-shadow: #c39152 -10px 10px;
+}

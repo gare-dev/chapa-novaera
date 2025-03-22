@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    .sectionDiv {
+        width: 80%;
+        height: 370px;
+        border: solid 1px #C39152;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        @media (max-width: 408px) {
+            height: 320px;
+        }
+
+        .divStyles {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            height: 100%;
+
+            @media (max-width: 730px) {
+                width: 100%;
+            }
+
+            .textDiv {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .buttonDiv {
+                    padding-top: 40px;
+
+                    .button {
+                        background-color: #C39152;
+                        border: 0;
+                        border-radius: 100px;
+                        height: 37px;
+                        padding: 0px 15px 0px 15px;
+                        color: #131312;
+                        font-size: 12px;
+                        font-family: "Inter", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 900;
+                        font-style: normal;
+                        cursor: pointer;
+                        transition: all 0.5s ease-in-out;
+                        box-shadow: rgba(105, 105, 105, 0.2) 0px 8px 24px;
+                    }
+
+                    .button:hover {
+                        transform: translate(3%, -3%);
+                        background-color: #B39152;
+
+                    }
+                }
+
+                .chapaEra {
+                    color: #fff;
+                    font-size: 30px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    height: 0;
+
+                    @media (max-width: 408px) {
+                        font-size: 1.8em;
+                    }
+                }
+
+                .divSlogan {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    .slogan {
+                        color: #C39152;
+                        font-size: 40px;
+                        font-family: "Kantumruy Pro", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 900;
+                        font-style: normal;
+                        height: 0px;
+
+                        @media (max-width: 408px) {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logoDiv {
+            padding-right: 100px;
+
+            .miniLogo {
+                height: auto;
+                width: 150%;
+
+                @media (max-width: 730px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.propostasDiv {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: #1E1E1E;
+
+    .divTitle {
+        display: flex;
+        justify-content: center;
+
+
+        .principais {
+            padding-left: 20px;
+            color: #fff;
+            font-size: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            width: auto;
+        }
+
+        .propostas {
+            padding-left: 20px;
+            color: #C39152;
+            font-size: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            width: auto;
+        }
+    }
+
+    .propsBoxDiv {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
