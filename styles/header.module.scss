@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #131312;
+    border-bottom: solid 1px #C39152;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 5%;
+
+    .imageDiv {
+        .miniLogo {
+            width: 55%;
+            height: 100%;
+        }
+    }
+
+    .atag {
+        color: #fff;
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.blurredScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+}
+
+.sideBarDiv {
+    height: 100%;
+    background-color: #1E1E1E;
+    width: 50%;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    z-index: 9999;
+    // border-right: 1px solid #C39152;
+}
+
+.headerMobile {
+    width: 100%;
+    height: 60px;
+    background-color: #131312;
+    border-bottom: solid 1px #C39152;
+
+
+    .divSidebar {
+        position: absolute;
+        padding-top: 18px;
+        padding-left: 15px;
+    }
+
+    .imageDivMobile {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+
+
+        .miniLogoMobile {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+}
+
+.divLogoMobile {
+    display: flex;
+    justify-content: center;
+
+    .miniLogoMobileSidebar {
+        width: auto;
+        height: 50%;
+    }
+}
+
+.menuSideBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 50px;
+
+
+
+    .subMenuSideBar {
+        border-top: 1px solid #C39152;
+
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+
+
+        .textSubMenuSideBar {
+            padding-left: 20px;
+            color: #fff;
+            font-size: 15px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+.openedSideBar {
+    transform: translateX(0);
+}
+
+.closedSideBar {
+    transform: translateX(-100%);
+}
