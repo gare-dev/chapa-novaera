@@ -1,16 +1,16 @@
 import styles from "@/styles/header.module.scss"
 import useWindowDimensions from "@/utils/getWindowDimensions";
 import Image from "next/image";
-import { useCallback, useEffect, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { FaBars } from "react-icons/fa";
 import BlurredScreen from "../BlurredScreen";
 
 
 export default function Header() {
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
     const [openedSideBar, setOpenedSideBar] = useState(false)
 
-    const [isPending, startTransition] = useTransition();
+    const [, startTransition] = useTransition();
 
     const toggleSidebar = () => {
         startTransition(() => {
