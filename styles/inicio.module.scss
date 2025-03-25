@@ -153,4 +153,76 @@
         gap: 20px;
         flex-wrap: wrap;
     }
+
+    .allPropsDiv {
+        justify-content: center;
+        display: flex;
+        padding-top: 40px;
+
+        .propsButton {
+            background-color: #C39152;
+            border: 0;
+            border-radius: 100px;
+            height: 37px;
+            padding: 0px 15px 0px 15px;
+            color: #131312;
+            font-size: 12px;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            box-shadow: rgba(105, 105, 105, 0.2) 0px 8px 24px;
+        }
+
+        .propsButton:hover {
+            transform: translate(3%, -3%);
+            background-color: #B39152;
+
+        }
+    }
+}
+
+.equipeDiv {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: #1E1E1E;
+    margin-top: 50px;
+
+    .divEquipe {
+        display: flex;
+        justify-content: center;
+
+
+        .nossa {
+            padding-left: 20px;
+            color: #fff;
+            font-size: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            width: auto;
+        }
+
+        .equipe {
+            padding-left: 20px;
+            color: #C39152;
+            font-size: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            width: auto;
+        }
+    }
+
+    .equipeBoxDiv {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 }

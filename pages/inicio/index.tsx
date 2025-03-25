@@ -3,7 +3,8 @@ import styles from "@/styles/inicio.module.scss"
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import PropsBox from "@/components/PropsBox";
-import { principaisPropostas } from "@/content/text";
+import { equipe, principaisPropostas } from "@/content/text";
+import EquipeBox from "@/components/EquipeBox";
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
@@ -15,8 +16,8 @@ export default function Inicio() {
                 <div className={styles.sectionDiv}>
                     <div className={styles.divStyles}>
                         <div className={styles.textDiv}>
-                            <div>
-                                <h2 className={styles.chapaEra}>CHAPA ERA</h2>
+                            <div style={{ paddingBottom: 25 }}>
+                                <h2 className={styles.chapaEra}>CHAPA NOVA ERA</h2>
                             </div>
                             <div className={styles.divSlogan}>
                                 <h2 className={styles.slogan}>ESCUTAR,</h2>
@@ -55,6 +56,32 @@ export default function Inicio() {
 
                 </div>
 
+                <div className={styles.allPropsDiv}>
+                    <button className={styles.propsButton}>TODAS PROPOSTAS</button>
+                </div>
+
+            </section>
+
+            <section className={styles.equipeDiv}>
+                <div className={styles.divEquipe}>
+                    <p className={styles.nossa}>Nossa</p><p className={styles.equipe}>Equipe</p>
+                </div>
+                <div className={styles.equipeBoxDiv}>
+                    {equipe.map((item, index) => {
+                        return (
+                            <EquipeBox
+                                key={index}
+                                role={item.role}
+                                imageUrl1={item.imageUrl1}
+                                imageUrl2={item.imageUrl2}
+                                name1={item.name1}
+                                name2={item.name2}
+                                sala1={item.sala1}
+                                sala2={item.sala2}
+                            />
+                        )
+                    })}
+                </div>
             </section>
         </>
     )

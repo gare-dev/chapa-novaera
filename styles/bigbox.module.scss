@@ -1,0 +1,49 @@
+.bigBoxDiv {
+    height: auto;
+    width: 45%;
+    border: 2px solid #c39152;
+    border-radius: 10px;
+    box-shadow: #c39152 -5px 5px;
+    min-width: 280px;
+    min-height: 300px;
+
+    .titleDiv {
+        display: flex;
+        justify-content: last;
+        align-items: center;
+        padding: 15px;
+        gap: 40px;
+
+        .titleText {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+
+    .textDiv {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+
+        .text {
+            width: 95%;
+            height: 95%;
+            text-align: justify;
+            color: #fff;
+            font-family: "Cabin", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: extra-expanded;
+
+        }
+    }
+
+}

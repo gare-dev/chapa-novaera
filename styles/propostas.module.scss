@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+.mainSection {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: #1E1E1E;
+    margin-top: 50px;
+
+    .titleDiv {
+        padding-left: 50px;
+        padding-top: 20px;
+
+        .titleText {
+            color: #C39152;
+            font-size: 25px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+
+    .propsDiv {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+}

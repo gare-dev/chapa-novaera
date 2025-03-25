@@ -1,13 +1,13 @@
 import styles from "@/styles/props.module.scss"
 import { IconType } from "react-icons"
 
-export interface Props {
+export interface PropsProps {
     icon: IconType
     title: string
     text: string
 }
 
-export default function PropsBox(props: Props) {
+export default function PropsBox(props: PropsProps) {
 
     return (
         <div className={styles.mainBox}>
