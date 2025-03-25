@@ -4,11 +4,15 @@ import Image from "next/image";
 import { useState, useTransition } from "react";
 import { FaBars } from "react-icons/fa";
 import BlurredScreen from "../BlurredScreen";
+import { useRouter } from "next/router";
+
+
 
 
 export default function Header() {
     const { width } = useWindowDimensions();
     const [openedSideBar, setOpenedSideBar] = useState(false)
+    const router = useRouter()
 
     const [, startTransition] = useTransition();
 
@@ -18,7 +22,9 @@ export default function Header() {
         });
     };
 
-
+    function redirect(page: string) {
+        router.push(`/${page}`)
+    }
 
 
     if (width && width >= 806) {
@@ -34,10 +40,10 @@ export default function Header() {
                     />
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Início</h1>
+                    <h1 onClick={() => redirect('inicio')} className={styles.atag}>Início</h1>
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Propostas</h1>
+                    <h1 onClick={() => redirect('propostas')} className={styles.atag}>Propostas</h1>
                 </div>
                 <div>
                     <h1 className={styles.atag}>Avisos</h1>

@@ -5,10 +5,17 @@ import dynamic from "next/dynamic";
 import PropsBox from "@/components/PropsBox";
 import { equipe, principaisPropostas } from "@/content/text";
 import EquipeBox from "@/components/EquipeBox";
+import { useRouter } from "next/router";
+
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
 export default function Inicio() {
+    const router = useRouter()
+
+    function redirect(page: string) {
+        router.push(`/${page}`)
+    }
     return (
         <>
             <Header />
@@ -25,7 +32,7 @@ export default function Inicio() {
                                 <h2 className={styles.slogan}>APLICAR.</h2>
                             </div>
                             <div className={styles.buttonDiv}>
-                                <button className={styles.button}>VEJA TODAS NOSSAS PROPOSTAS</button>
+                                <button onClick={() => redirect('/propostas')} className={styles.button}>VEJA TODAS NOSSAS PROPOSTAS</button>
                             </div>
                         </div>
                     </div>
@@ -57,7 +64,7 @@ export default function Inicio() {
                 </div>
 
                 <div className={styles.allPropsDiv}>
-                    <button className={styles.propsButton}>TODAS PROPOSTAS</button>
+                    <button onClick={() => redirect('/propostas')} className={styles.propsButton}>TODAS PROPOSTAS</button>
                 </div>
 
             </section>

@@ -8,7 +8,7 @@ import { PropsBigBox } from "@/components/PropsBigBox";
 import { BiParty } from "react-icons/bi";
 import { TfiBlackboard } from "react-icons/tfi";
 import { TbRibbonHealth } from "react-icons/tb";
-import { GiPartyFlags } from "react-icons/gi";
+import { GiPartyFlags, GiThreeFriends } from "react-icons/gi";
 
 
 export const principaisPropostas: PropsProps[] = [
@@ -109,7 +109,7 @@ export const propostas: PropsBigBox[] = [
         par2: "Além de receber ideias para eventos e iniciativas, o Grêmio atuará como intermediador entre os alunos e a direção, garantindo que questões importantes sejam levadas à administração da escola de forma organizada e representativa. Esse projeto busca dar voz aos estudantes e fortalecer o diálogo dentro da instituição, tornando a escola um ambiente mais inclusivo e acolhedor."
     },
     {
-        icon: IoMdMail,
+        icon: GiThreeFriends,
         title: "Comissão De Terceirão",
         par1: "A Comissão de Terceirão será formada por um aluno de cada turma do terceirão, com o objetivo de ajudar a organizar tudo o que for relacionado aos alunos do último ano.",
         par2: "Essa comissão será essencial na coordenação de eventos específicos, como formaturas, festas de despedida e outras atividades que marcam o encerramento dessa etapa escolar. Além disso, a comissão ajudará a garantir que as demandas e desejos dos alunos do terceirão sejam ouvidos e atendidos, contribuindo para a organização e execução de momentos importantes para todos.",
