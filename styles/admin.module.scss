@@ -1,0 +1,14 @@
+.divMensagens {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    .mensagensBox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+}

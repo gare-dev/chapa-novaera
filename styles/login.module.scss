@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.mainDiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80dvh;
+
+    .loginBox {
+        height: 500px;
+        width: 80%;
+        border: 2px solid #C39152;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @media (min-width: 425px) {
+            width: 400px;
+        }
+
+
+
+        .inputsDiv {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            gap: 20px;
+            width: 100%;
+
+            .input {
+                outline: none;
+                background-color: transparent;
+                border: #C39152 2px solid;
+                border-radius: 2px;
+                height: 20px;
+                width: 100%;
+                color: white;
+                font-size: 15px;
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 300;
+                font-style: normal;
+
+                &::placeholder {
+
+                    padding-left: 5px;
+                    padding-top: 5px;
+                }
+            }
+
+        }
+
+        .buttonDiv {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+
+            .button {
+                background-color: #C39152;
+                border: 0;
+                border-radius: 100px;
+                height: 37px;
+                padding: 0px 15px 0px 15px;
+                color: #131312;
+                font-size: 12px;
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 900;
+                font-style: normal;
+                cursor: pointer;
+                width: 50%;
+                transition: all 0.5s ease-in-out;
+                box-shadow: rgba(105, 105, 105, 0.2) 0px 8px 24px;
+
+
+            }
+
+
+        }
+
+
+    }
+}

@@ -35,6 +35,7 @@ export default function MensagemAnonimas() {
         }
 
 
+
     }
     return (
         <>
@@ -47,10 +48,17 @@ export default function MensagemAnonimas() {
                 </div>
                 <div className={styles.inputDiv}>
 
-                    <input onChange={(e) => setName(e.target.value)} placeholder="Nome (opcional)" className={styles.inputName} type="text" />
+                    <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome (opcional)" className={styles.inputName} type="text" />
 
 
-                    <textarea onChange={(e) => setMessage(e.target.value)} placeholder="Mensagem" className={styles.inputMessage} name="a" id=""></textarea>
+                    <textarea value={message} onChange={(e) => {
+                        if (e.target.value.length > 300) {
+                            console.log("123")
+                            return
+                        }
+                        setMessage(e.target.value)
+                    }
+                    } placeholder="Mensagem" className={styles.inputMessage} name="a" id=""></textarea>
 
                 </div>
                 <div className={styles.buttonDiv}>

@@ -21,11 +21,11 @@ const Alert: React.FC<Props> = ({ type = "success", message, onClose }) => {
       icon: IoMdCheckmark,
     },
     warning: {
-      color: "#fed601",
+      color: "#C39152",
       icon: TiWarningOutline,
     },
     danger: {
-      color: "#a42b2a",
+      color: "#C39152",
       icon: MdDangerous,
     },
   };
@@ -62,6 +62,7 @@ const Alert: React.FC<Props> = ({ type = "success", message, onClose }) => {
         X
       </button> */}
     </div>
+
   );
 };
 

@@ -14,7 +14,7 @@ class _Api {
         this._jwt = jwt
         this._instance = axios.create({
             timeout: 30000,
-            baseURL: 'https://chapaera-api.vercel.app/',
+            baseURL: 'http://localhost:3001',
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": this._jwt
@@ -22,34 +22,18 @@ class _Api {
             responseType: "json",
         });
 
-        // this._instance.interceptors.request.use(req => {
-        //     const token = localStorage.getItem('accessToken');
+        this._instance.interceptors.request.use(req => {
+            const token = localStorage.getItem('token');
 
-        //     if (this.isIOS) {
-        //         req.headers.Cookie = `token=${token}`;
-        //     }
+            req.headers.Authorization = token
 
-        //     return req;
-        // });
+            return req;
+        });
 
-        // this._instance.interceptors.response.use(response => {
-        //     console.log(response.headers)
-        //     const jwtCookie = response.headers['set-cookie']?.find((cookie: string) => cookie.startsWith('token='));
-        //     console.log("JWTCOOKIE: " + jwtCookie)
-
-        //     const jwtToken = jwtCookie ? jwtCookie.split(';')[0].split('=')[1] : null;
-        //     console.log("JWTTOKKEN: " + jwtToken)
-        //     if (jwtToken) {
-        //         localStorage.setItem("accessToken", jwtToken)
-        //     }
-        //     return { ...response, data: handleDates(response.data) };
-        // });
 
     }
 
-    public setJWT(jwt: string) {
-        this._jwt = jwt
-    }
+
 
     public async post(url: string, data?: any) {
         return this._instance.post(url, data);
@@ -69,6 +53,21 @@ class _Api {
             name,
             message
         })
+    }
+
+    public async login(login: string, password: string) {
+        return this._instance.post('/api/login', {
+            login,
+            password
+        })
+    }
+
+    public async checkPermission() {
+        return this._instance.post('/api/checkpermission')
+    }
+
+    public async getMessages() {
+        return this._instance.post('/api/listmessage')
     }
 }
 

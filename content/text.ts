@@ -38,12 +38,12 @@ export const principaisPropostas: PropsProps[] = [
 export const equipe: PropsEquipe[] = [
     {
         role: "Coordenadores Gerais",
-        name1: "Cauani Sasaki",
-        name2: "Emilly Luiza",
-        imageUrl1: "cauani.jpg",
-        imageUrl2: "emilly.jpg",
-        sala1: "3DM",
-        sala2: "3EM"
+        name1: "Emilly Luiza",
+        name2: "Cauani Sasaki",
+        imageUrl1: "emilly.jpg",
+        imageUrl2: "cauani.jpg",
+        sala1: "3EM",
+        sala2: "3DM"
     },
     {
         role: "Coordenadores Esporte",
