@@ -42,20 +42,24 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     transition: opacity 0.3s ease;
+    z-index: 99999;
+
 }
 
 .sideBarDiv {
-    height: 100%;
-    background-color: #1E1E1E;
+    height: 100vh;
     width: 50%;
-    position: absolute;
+    background-color: #1E1E1E;
+    position: fixed;
+    top: 0;
+    left: 0;
     transition: all 0.5s ease-in-out;
-    z-index: 9999;
-    // border-right: 1px solid #C39152;
+    z-index: 99999999;
+
 }
 
 .headerMobile {
@@ -104,7 +108,6 @@
     padding-top: 50px;
 
 
-
     .subMenuSideBar {
         border-top: 1px solid #C39152;
 
@@ -129,6 +132,9 @@
 
 .openedSideBar {
     transform: translateX(0);
+    z-index: 99999;
+    overflow: hidden;
+
 }
 
 .closedSideBar {

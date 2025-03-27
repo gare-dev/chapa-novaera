@@ -1,7 +1,7 @@
 import styles from "@/styles/header.module.scss"
 import useWindowDimensions from "@/utils/getWindowDimensions";
 import Image from "next/image";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { FaBars } from "react-icons/fa";
 import BlurredScreen from "../BlurredScreen";
 import { useRouter } from "next/router";
@@ -13,8 +13,19 @@ export default function Header() {
     const { width } = useWindowDimensions();
     const [openedSideBar, setOpenedSideBar] = useState(false)
     const router = useRouter()
-
     const [, startTransition] = useTransition();
+
+    useEffect(() => {
+        if (openedSideBar) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [openedSideBar]);
 
     const toggleSidebar = () => {
         startTransition(() => {
@@ -49,7 +60,7 @@ export default function Header() {
                     <h1 className={styles.atag}>Avisos</h1>
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Canal Anônimo</h1>
+                    <h1 onClick={() => redirect('mensagemAnonima')} className={styles.atag}>Canal Anônimo</h1>
                 </div>
                 <div>
                     <h1 className={styles.atag}>Equipe</h1>
@@ -62,8 +73,8 @@ export default function Header() {
     } else {
         return (
             <>
-                {openedSideBar && <BlurredScreen onClick={() => setOpenedSideBar(false)} />}
 
+                {openedSideBar && <BlurredScreen onClick={() => setOpenedSideBar(false)} />}
                 <div className={`${styles.sideBarDiv} ${openedSideBar ? styles.openedSideBar : styles.closedSideBar}`}>
 
                     <div className={styles.divLogoMobile}>
