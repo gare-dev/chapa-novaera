@@ -17,7 +17,7 @@ const Alert: React.FC<Props> = ({ type = "success", message, onClose }) => {
   }, [onClose]);
   const types = {
     success: {
-      color: "#4db051",
+      color: "#C39152",
       icon: IoMdCheckmark,
     },
     warning: {

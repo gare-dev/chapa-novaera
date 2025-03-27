@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styles from "@/styles/mensagemAnonima.module.scss"
+import styles from "@/styles/mensagemAnonimas.module.scss"
 import { useState } from "react";
 import Api from "@/api";
 import useAlert from "@/hooks/useAlert";
@@ -8,12 +8,17 @@ import useAlert from "@/hooks/useAlert";
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
-export default function MensagemAnonima() {
+export default function MensagemAnonimas() {
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
     const { showAlert } = useAlert()
 
     const handleSubmit = async () => {
+
+        if (!message) {
+            showAlert("Por favor, preencha o campo da mensagem.", "warning")
+
+        }
 
         try {
             const response = await Api.sendMessage(name ?? "", message ?? "")

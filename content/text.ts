@@ -57,9 +57,9 @@ export const equipe: PropsEquipe[] = [
     {
         role: "Coordenadores Cultura",
         name1: "Samuel Tossi",
-        name2: "Maria Doe",
+        name2: "Sofia Dias",
         imageUrl1: "samuel.jpg",
-        imageUrl2: "nophoto.jpg",
+        imageUrl2: "sofia.jpg",
         sala1: "3EM",
         sala2: "3EM"
     }

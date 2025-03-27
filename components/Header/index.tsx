@@ -60,7 +60,7 @@ export default function Header() {
                     <h1 className={styles.atag}>Avisos</h1>
                 </div>
                 <div>
-                    <h1 onClick={() => redirect('mensagemAnonima')} className={styles.atag}>Canal Anônimo</h1>
+                    <h1 onClick={() => redirect('mensagemAnonimas')} className={styles.atag}>Canal Anônimo</h1>
                 </div>
                 <div>
                     <h1 className={styles.atag}>Equipe</h1>
@@ -89,16 +89,19 @@ export default function Header() {
 
                     <div className={styles.menuSideBar}>
                         <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Início</h2>
+                            <h2 onClick={() => redirect('inicio')} className={styles.textSubMenuSideBar}>Início</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Propostas</h2>
+                            <h2 onClick={() => redirect('propostas')} className={styles.textSubMenuSideBar}>Propostas</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
                             <h2 className={styles.textSubMenuSideBar}>Avisos</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
                             <h2 className={styles.textSubMenuSideBar}>Equipe</h2>
+                        </div>
+                        <div className={styles.subMenuSideBar}>
+                            <h2 onClick={() => redirect('mensagensAnonimas')} className={styles.textSubMenuSideBar}>Mensagens Anônimas</h2>
                         </div>
                         <div style={{ borderBottom: "1px solid #C39152" }} className={styles.subMenuSideBar}>
                             <h2 className={styles.textSubMenuSideBar}>Amistosos</h2>
