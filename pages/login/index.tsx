@@ -1,4 +1,5 @@
 import Api from "@/api";
+import LoadingComponent from "@/components/LoadingComponent";
 import useAlert from "@/hooks/useAlert";
 import styles from "@/styles/login.module.scss"
 import { AxiosError } from "axios";
@@ -17,6 +18,7 @@ export default function Login() {
     const [password, setPassword] = useState("")
     const { showAlert } = useAlert()
     const router = useRouter()
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = async () => {
 
@@ -25,6 +27,7 @@ export default function Login() {
         }
 
         try {
+            setLoading(true)
             const response = await Api.login(login, password)
 
             if (response.data.auth === true) {
@@ -39,16 +42,15 @@ export default function Login() {
                     showAlert("Login ou Senha incorretos.", "danger")
                 }
             }
-
+        } finally {
+            setLoading(false)
         }
-
-
-
     }
 
     return (
         <>
             <Header />
+            {loading && <LoadingComponent />}
             <div className={styles.mainDiv}>
 
                 <div className={styles.loginBox}>

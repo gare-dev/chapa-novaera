@@ -6,19 +6,24 @@ import PropsBox from "@/components/PropsBox";
 import { equipe, principaisPropostas } from "@/content/text";
 import EquipeBox from "@/components/EquipeBox";
 import { useRouter } from "next/router";
+import LoadingComponent from "@/components/LoadingComponent";
+import { useState } from "react";
 
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
 export default function Inicio() {
     const router = useRouter()
+    const [loading, setLoading] = useState(false)
 
     function redirect(page: string) {
+        setLoading(true)
         router.push(`/${page}`)
     }
     return (
         <>
             <Header />
+            {loading && <LoadingComponent />}
             <section className={styles.section}>
                 <div className={styles.sectionDiv}>
                     <div className={styles.divStyles}>

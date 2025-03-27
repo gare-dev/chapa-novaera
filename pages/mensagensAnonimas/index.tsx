@@ -3,6 +3,7 @@ import styles from "@/styles/mensagemAnonimas.module.scss"
 import { useState } from "react";
 import Api from "@/api";
 import useAlert from "@/hooks/useAlert";
+import LoadingComponent from "@/components/LoadingComponent";
 
 
 
@@ -12,6 +13,7 @@ export default function MensagemAnonimas() {
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
     const { showAlert } = useAlert()
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = async () => {
 
@@ -21,6 +23,7 @@ export default function MensagemAnonimas() {
         }
 
         try {
+            setLoading(true)
             const response = await Api.sendMessage(name ?? "", message ?? "")
 
             if (response.data.code === "INSERT_SUCCESSFULL") {
@@ -32,6 +35,8 @@ export default function MensagemAnonimas() {
 
         } catch (error) {
             console.log(error)
+        } finally {
+            setLoading(false)
         }
 
 
@@ -40,7 +45,7 @@ export default function MensagemAnonimas() {
     return (
         <>
             <Header />
-
+            {loading && <LoadingComponent />}
             <div className={styles.mainDiv}>
                 <div className={styles.titleDiv}>
                     <p className={styles.title}>Envie uma mensagem anônima</p>
