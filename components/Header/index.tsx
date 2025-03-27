@@ -60,7 +60,7 @@ export default function Header() {
                     <h1 className={styles.atag}>Avisos</h1>
                 </div>
                 <div>
-                    <h1 onClick={() => redirect('mensagemAnonimas')} className={styles.atag}>Canal Anônimo</h1>
+                    <h1 onClick={() => redirect('mensagensAnonimas')} className={styles.atag}>Canal Anônimo</h1>
                 </div>
                 <div>
                     <h1 className={styles.atag}>Equipe</h1>
