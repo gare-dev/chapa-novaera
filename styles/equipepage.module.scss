@@ -1,0 +1,43 @@
+.equipeDiv {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: #1E1E1E;
+    margin-top: 50px;
+
+    .divEquipe {
+        display: flex;
+        justify-content: center;
+
+
+
+        .nossa {
+            padding-left: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+
+        .equipe {
+            padding-left: 20px;
+            color: #C39152;
+            font-size: 30px;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            width: auto;
+        }
+    }
+
+    .equipeBoxDiv {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

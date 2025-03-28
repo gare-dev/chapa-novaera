@@ -48,11 +48,11 @@ export const equipe: PropsEquipe[] = [
     {
         role: "Coordenadores Esporte",
         name1: "João Pedro",
-        name2: "Cardoso",
+        name2: "Richard Cardoso",
         imageUrl1: "jp.jpg",
         imageUrl2: "cardoso.jpg",
         sala1: "3DM",
-        sala2: "3HT"
+        sala2: "2HT"
     },
     {
         role: "Coordenadores Cultura",
@@ -62,7 +62,92 @@ export const equipe: PropsEquipe[] = [
         imageUrl2: "sofia.jpg",
         sala1: "3EM",
         sala2: "3EM"
-    }
+    },
+]
+
+export const equipeInteira: PropsEquipe[] = [
+    {
+        role: "Coordenadores Gerais",
+        name1: "Emilly Luiza",
+        name2: "Cauani Sasaki",
+        imageUrl1: "emilly.jpg",
+        imageUrl2: "cauani.jpg",
+        sala1: "3EM",
+        sala2: "3DM"
+    },
+    {
+        role: "Coordenadores Esporte",
+        name1: "João Pedro",
+        name2: "Richard Cardoso",
+        imageUrl1: "jp.jpg",
+        imageUrl2: "cardoso.jpg",
+        sala1: "3DM",
+        sala2: "2HT"
+    },
+    {
+        role: "Coordenadores Cultura",
+        name1: "Samuel Tossi",
+        name2: "Sofia Dias",
+        imageUrl1: "samuel.jpg",
+        imageUrl2: "sofia.jpg",
+        sala1: "3EM",
+        sala2: "3EM"
+    },
+    {
+        role: "Coordenadores Financeiros",
+        name1: "Daniel Goncalves",
+        name2: "Annyca Costa",
+        imageUrl1: "nophoto.jpg",
+        imageUrl2: "nophoto.jpg",
+        sala1: "3DM",
+        sala2: "3DM"
+    },
+    {
+        role: "Coordenadores Comunicação",
+        name1: "Raissa Costa",
+        name2: "Daniela Vieira",
+        imageUrl1: "raissa.jpg",
+        imageUrl2: "nophoto.jpg",
+        sala1: "3AT",
+        sala2: "3DM"
+    },
+    {
+        role: "Relações Acadêmicas",
+        name1: "Felipe de Oliveira",
+        imageUrl1: "nophoto.jpg",
+        sala1: "",
+    },
+
+]
+
+export const fiscais: PropsEquipe[] = [
+    {
+        role: "Fiscais 1",
+        name1: "Guilherme Garé",
+        name2: "Carlos Eduardo",
+        imageUrl1: "gare.jpg",
+        imageUrl2: "carlos.jpg",
+        sala1: "3EM",
+        sala2: "3EM"
+    },
+    {
+        role: "Fiscais 2",
+        name1: "Giovanni Salmasi",
+        name2: "Luiz Guilherme",
+        imageUrl1: "nophoto.jpg",
+        imageUrl2: "nophoto.jpg",
+        sala1: "3EM",
+        sala2: ""
+    },
+    {
+        role: "Fiscais 3",
+        name1: "André de Almeida",
+        name2: "Brenno Vieira",
+        imageUrl1: "andre.jpg",
+        imageUrl2: "breno.jpg",
+        sala1: "3EM",
+        sala2: "3DM"
+    },
 ]
 
 export const propostas: PropsBigBox[] = [

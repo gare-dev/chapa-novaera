@@ -23,7 +23,7 @@ export default function Login() {
     const handleSubmit = async () => {
 
         if (!login || !password) {
-            return showAlert("Por favor, preencha todos os campos,", "warning")
+            return showAlert("Por favor, preencha todos os campos.", "warning")
         }
 
         try {
@@ -52,7 +52,6 @@ export default function Login() {
             <Header />
             {loading && <LoadingComponent />}
             <div className={styles.mainDiv}>
-
                 <div className={styles.loginBox}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Image

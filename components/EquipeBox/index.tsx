@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export interface PropsEquipe {
     role: string
-    imageUrl1: string
-    imageUrl2: string
-    name1: string
-    name2: string
-    sala1: string
-    sala2: string
+    imageUrl1?: string
+    imageUrl2?: string
+    name1?: string
+    name2?: string
+    sala1?: string
+    sala2?: string
 }
 
 
@@ -32,7 +32,7 @@ export default function EquipeBox(props: PropsEquipe) {
                         <p className={styles.sala}>{props.sala1}</p>
                     </div>
                 </div>
-                <div className={styles.equipeBox}>
+                {props.name2 && (<div className={styles.equipeBox}>
                     <Image
                         alt="Logo Image"
                         src={`/assets/img/${props.imageUrl2}`}
@@ -44,7 +44,7 @@ export default function EquipeBox(props: PropsEquipe) {
                         <p className={styles.name}>{props.name2}</p>
                         <p className={styles.sala}>{props.sala2}</p>
                     </div>
-                </div>
+                </div>)}
             </div>
         </div>
     )

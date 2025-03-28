@@ -63,7 +63,7 @@ export default function Header() {
                     <h1 onClick={() => redirect('mensagensAnonimas')} className={styles.atag}>Canal Anônimo</h1>
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Equipe</h1>
+                    <h1 onClick={() => redirect('equipe')} className={styles.atag}>Equipe</h1>
                 </div>
                 <div>
                     <h1 className={styles.atag}>Amistosos</h1>
@@ -98,7 +98,7 @@ export default function Header() {
                             <h2 className={styles.textSubMenuSideBar}>Avisos</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Equipe</h2>
+                            <h2 onClick={() => redirect('equipe')} className={styles.textSubMenuSideBar}>Equipe</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
                             <h2 onClick={() => redirect('mensagensAnonimas')} className={styles.textSubMenuSideBar}>Mensagens Anônimas</h2>
