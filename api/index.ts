@@ -14,7 +14,7 @@ class _Api {
         this._jwt = jwt
         this._instance = axios.create({
             timeout: 30000,
-            baseURL: 'https://chapaera-api.vercel.app/', // https://chapaera-api.vercel.app/
+            baseURL: 'http://localhost:3001/', // https://chapaera-api.vercel.app/ http://localhost:3001/
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": this._jwt
@@ -77,6 +77,14 @@ class _Api {
         return this._instance.post('/api/markasvisu', {
             operation,
             idMessage
+        })
+    }
+
+    public async createUser(login: string, password: string, description: string) {
+        return this._instance.post('/api/createuser', {
+            login,
+            password,
+            description
         })
     }
 }

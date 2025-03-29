@@ -76,3 +76,78 @@
         width: 100%;
     }
 }
+
+.divCriarUsuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+    .criarUsuarioBox {
+        height: 500px;
+        width: 400px;
+        border: #C39152 2px solid;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+
+        .divButton {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .inputDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 90%;
+
+            .subInputDiv {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .caption {
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+
+                .textarea {
+                    height: 100px;
+                    width: 97%;
+                    outline: none;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    resize: 'none'
+                }
+
+                .input {
+                    width: 97%;
+                    outline: none;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+
+                }
+            }
+        }
+
+
+    }
+}

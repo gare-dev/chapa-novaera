@@ -8,6 +8,7 @@ import { AxiosError } from "axios";
 import MensagensBox from "@/components/MensagensBox";
 import { IoMdRefresh } from "react-icons/io";
 import MessageInfo from "@/components/MessageInfo";
+import Button from "@/components/Button";
 
 const HeaderAdmin = dynamic(() => import("@/components/HeaderAdmin"), { ssr: false });
 
@@ -21,16 +22,53 @@ export interface MessageRes {
     visualized: boolean
 }
 
+export const initialMessageRes: MessageRes = {
+    id_message: 0,
+    ip: '',
+    message: '',
+    name: '',
+    timestamp: '',
+    user_agent: '',
+    visualized: false,
+}
+
+
 
 export default function Admin() {
     const router = useRouter();
     const { showAlert } = useAlert()
-    const [screen, setScreen] = useState("")
+    const [screen, setScreen] = useState("Criar Usuário")
     const [messages, setMessages] = useState<MessageRes[]>()
     const [checked, setChecked] = useState(false)
     const [filter, setFilter] = useState("")
-    const [closeInfo, setCloseInfo] = useState(true)
+    const [closeInfo, setCloseInfo] = useState(false)
     const [selectedInfo, setSelectedInfo] = useState<MessageRes>()
+
+    const [login, setLogin] = useState("")
+    const [pwd, setPwd] = useState("")
+    const [desc, setDesc] = useState("")
+
+    const handleCreateUser = async () => {
+
+        if (!login || !pwd || !desc) {
+            return showAlert("Por favor, preencha todos os campos.", "warning")
+        }
+        try {
+            const response = await Api.createUser(login, pwd, desc)
+
+            if (response.data.code === "USER_CREATED") {
+                return showAlert("Usuário criado com sucesso.", "success")
+            }
+
+        } catch (error) {
+            if (error instanceof AxiosError) {
+                if (error.response?.data.code === "INVALID_USERNAME") {
+                    return showAlert("Já existe um usuário com esse nome.", "warning")
+                }
+            }
+
+        }
+    }
 
 
     const handleCheckPermission = async () => {
@@ -62,11 +100,11 @@ export default function Admin() {
                 if (response.data.code === "LIST_SUCCESSFULL") {
                     setMessages(response.data.data)
                 }
-                console.log(response.data.data)
             } catch (error) {
                 if (error instanceof AxiosError) {
                     if (error.response?.data.code === "NO_DATA") {
-                        showAlert("Nenhuma mensagem encontrada.")
+                        showAlert("Nenhuma nova mensagem encontrada.")
+                        setMessages([initialMessageRes])
                     }
                 }
             }
@@ -81,13 +119,13 @@ export default function Admin() {
         handleCheckPermission()
     }, [])
 
-    const markAsVisualized = async (idMessage: string) => {
+    const markAsVisualized = async (idMessage: string, operation: boolean) => {
         try {
 
-            const response = await Api.markAsVisualized(true, idMessage)
+            const response = await Api.markAsVisualized(operation, idMessage)
 
             if (response.data.code === "VISUALIZED_SUCCESSFULL") {
-                showAlert("Mensagem visualizada com sucesso!")
+                showAlert(`Mensagem ${operation ? "visualizada" : "desvisualizada"}  com sucesso!`)
                 handle()
             }
 
@@ -117,7 +155,6 @@ export default function Admin() {
             hour12: false
         });
     }
-
     return (
         <div>
             {closeInfo && <MessageInfo
@@ -132,10 +169,7 @@ export default function Admin() {
 
             <HeaderAdmin funcOnClick={(e) => setScreen(e.currentTarget.innerText)} />
             {screen === "Mensagens" ? (
-
                 <div className={styles.divMensagens}>
-
-
                     <div className={styles.divTools}>
                         <IoMdRefresh onClick={handle} size={"1.5em"} color={"#fff"} />
                         <div className={styles.seeVisuDiv}>
@@ -146,16 +180,15 @@ export default function Admin() {
                             <input value={filter} onChange={(e) => setFilter(e.target.value)} className={styles.inputFilter} type="text" />
                             <button onClick={handle} className={styles.filterBtt}>BUSCAR</button>
                         </div>
-
                     </div>
-
                     <div className={styles.mensagensBox}>
                         {messages?.map((item, index) => {
+                            if (item.id_message === 0) return
                             return (
                                 <MensagensBox
                                     onInfoClick={() => { setSelectedInfo(item); setCloseInfo(true) }}
                                     vizuOrNot={item.visualized ? '- Visualizada' : ""}
-                                    onEyeClick={() => markAsVisualized(item.id_message.toString())}
+                                    onEyeClick={() => markAsVisualized(item.id_message.toString(), !item.visualized)}
                                     key={index} message={item.message}
                                     nome={item.name ?? `Anônimo ${item.id_message}`}
                                     data={formatarData(item.timestamp)} />
@@ -164,11 +197,36 @@ export default function Admin() {
                     </div>
 
                 </div>
+            ) : screen === "Criar Usuário" ? (
+                <div className={styles.divCriarUsuario}>
+                    <div className={styles.criarUsuarioBox}>
+                        <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+                            <div className={styles.inputDiv}>
+
+                                <div className={styles.subInputDiv}>
+                                    <p className={styles.caption}>Login</p>
+                                    <input value={login} onChange={(e) => setLogin(e.target.value)} className={styles.input} type="text" />
+                                </div>
+                                <div className={styles.subInputDiv}>
+                                    <p className={styles.caption}>Senha</p>
+                                    <input value={pwd} onChange={(e) => setPwd(e.target.value)} className={styles.input} type="text" />
+                                </div>
+                                <div className={styles.subInputDiv}>
+                                    <p className={styles.caption}>Descrição</p>
+                                    <textarea value={desc} onChange={(e) => setDesc(e.target.value)} className={styles.textarea} name="" id=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.divButton}>
+                            <Button onClick={() => handleCreateUser()} style={{ height: 30, fontSize: 12 }} text="CRIAR USUÁRIO" />
+                        </div>
+                    </div>
+                </div>
             ) : (
                 <div>
-
                 </div>
-            )}
-        </div>
+            )
+            }
+        </div >
     );
 }
