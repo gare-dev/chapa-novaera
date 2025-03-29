@@ -14,7 +14,7 @@ class _Api {
         this._jwt = jwt
         this._instance = axios.create({
             timeout: 30000,
-            baseURL: 'https://chapaera-api.vercel.app/',
+            baseURL: 'http://localhost:3001',
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": this._jwt
@@ -66,8 +66,18 @@ class _Api {
         return this._instance.post('/api/checkpermission')
     }
 
-    public async getMessages() {
-        return this._instance.post('/api/listmessage')
+    public async getMessages(showVisualized: boolean, filter: string) {
+        return this._instance.post('/api/listmessage', {
+            showVisualized,
+            filter
+        })
+    }
+
+    public async markAsVisualized(operation: boolean, idMessage: string) {
+        return this._instance.post('/api/markasvisu', {
+            operation,
+            idMessage
+        })
     }
 }
 

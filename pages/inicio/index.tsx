@@ -94,6 +94,9 @@ export default function Inicio() {
                         )
                     })}
                 </div>
+                <div className={styles.equipeDivBtt}>
+                    <button onClick={() => redirect('/equipe')} className={styles.equipeBtt}>EQUPE INTEIRA</button>
+                </div>
             </section>
         </>
     )

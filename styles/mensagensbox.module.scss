@@ -7,7 +7,10 @@
 
     .nomeDiv {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        padding-top: 10px;
         gap: 30px;
         padding-left: 10px;
         color: #C39152;
@@ -17,6 +20,23 @@
         font-weight: 500;
         font-style: normal;
         height: 20px;
+
+        .divNames {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .vizuOrNot {}
+        }
+
+        .bttDiv {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nome {
+            font-weight: 800;
+        }
     }
 
     .messageDiv {

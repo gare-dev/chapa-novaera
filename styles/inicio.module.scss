@@ -163,10 +163,10 @@
             background-color: #C39152;
             border: 0;
             border-radius: 100px;
-            height: 37px;
-            padding: 0px 15px 0px 15px;
+            height: 45px;
+            padding: 0px 20px 0px 20px;
             color: #131312;
-            font-size: 12px;
+            font-size: 15px;
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
             font-weight: 900;
@@ -190,6 +190,35 @@
     padding-bottom: 50px;
     background-color: #1E1E1E;
     margin-top: 50px;
+
+    .equipeDivBtt {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+
+        .equipeBtt {
+            background-color: #C39152;
+            border: 0;
+            border-radius: 100px;
+            height: 45px;
+            padding: 0px 20px 0px 20px;
+            color: #131312;
+            font-size: 15px;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            box-shadow: rgba(105, 105, 105, 0.2) 0px 8px 24px;
+
+            &:hover {
+                transform: translate(3%, -3%);
+                background-color: #B39152;
+
+            }
+        }
+    }
 
     .divEquipe {
         display: flex;

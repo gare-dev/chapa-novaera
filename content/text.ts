@@ -15,13 +15,13 @@ import { IoNewspaper } from "react-icons/io5";
 export const principaisPropostas: PropsProps[] = [
     {
         icon: LuPartyPopper,
-        text: "O Grêmio Estudantil dará total apoio aos terceiros anos em seus trotes e eventos, garantindo que essas datas tão importantes sejam comemoradas da melhor forma possível e bem organizado.",
-        title: "Trotes e Eventos",
+        text: "A Gincana, promovida pelo Grêmio Estudantil ao longo de 2025, visa integrar os alunos, arrecadar recursos e incentivar o desempenho escolar por meio de atividades e desafios variados, desde ações solidárias até provas acadêmicas, de forma colaborativa e divertida.",
+        title: "Gincana EJS",
     },
     {
         icon: FaHandsWash,
-        text: "Nosso objetivo é garantir que todas as alunas tenham acesso a itens essenciais de higiene pessoal dentro da escola. A iniciativa busca disponibilizar absorventes e outros produtos básicos nos banheiros femininos.",
-        title: "Higiene Pessoal",
+        text: "O Grêmio Estudantil propõe a criação de um Jornal Estudantil, um canal de notícias exclusivo para alunos, visando transparência, compartilhamento de informações e engajamento da comunidade escolar. Será uma plataforma oficial de fácil acesso, onde os estudantes poderão se manter informados sobre a escola, o Grêmio e projetos.",
+        title: "Jornal Escolar",
     },
     {
         icon: PiSoccerBall,
@@ -29,9 +29,9 @@ export const principaisPropostas: PropsProps[] = [
         title: "Liga ETEC",
     },
     {
-        icon: IoMdMail,
-        text: "Ela tem como objetivo criar um canal direto e anônimo para que os alunos possam expressar suas opiniões, sugerir melhorias e relatar problemas que precisam de atenção.",
-        title: "Feedback",
+        icon: PiSoccerBall,
+        text: "A Chapa ERA possui um sistema automatizado de marcação de amistosos. Com ele, poderá ser marcado amistosos para o intervalo ou amistoso para qualquer data disponível, promovendo dinamicidade e mais liberdade para os alunos. ",
+        title: "Amistosos",
     },
 
 ]
