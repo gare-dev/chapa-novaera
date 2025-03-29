@@ -17,7 +17,17 @@ export default function Propostas() {
                 <div className={styles.propsDiv}>
                     {propostas.map((item, index) => {
                         return (
-                            <PropsBigBox icon={item.icon} title={item.title} par1={item.par1} par2={item.par2} par3={item.par3} key={index} />
+                            <PropsBigBox
+                                principal={item.principal}
+                                icon={item.icon}
+                                title={item.title}
+                                par1={item.par1}
+                                par2={item.par2}
+                                par3={item.par3}
+                                par4={item.par4}
+                                par5={item.par5}
+                                par6={item.par6}
+                                key={index} />
 
                         )
                     })}

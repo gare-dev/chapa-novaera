@@ -9,15 +9,26 @@
 
     .titleDiv {
         padding-left: 50px;
-        padding-top: 20px;
+        padding-top: 1px;
+
+        @media (max-width: 700px) {
+            padding-left: 0;
+
+        }
 
         .titleText {
             color: #C39152;
-            font-size: 25px;
+            font-size: 35px;
             font-family: "Kantumruy Pro", sans-serif;
             font-optical-sizing: auto;
             font-weight: 700;
             font-style: normal;
+
+            @media (max-width: 700px) {
+                text-align: center;
+
+            }
+
         }
     }
 
