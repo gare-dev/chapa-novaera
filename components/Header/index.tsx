@@ -57,7 +57,7 @@ export default function Header() {
                     <h1 onClick={() => redirect('propostas')} className={styles.atag}>Propostas</h1>
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Avisos</h1>
+                    <h1 onClick={() => redirect('avisos')} className={styles.atag}>Avisos</h1>
                 </div>
                 <div>
                     <h1 onClick={() => redirect('mensagensAnonimas')} className={styles.atag}>Canal Anônimo</h1>
@@ -66,7 +66,7 @@ export default function Header() {
                     <h1 onClick={() => redirect('equipe')} className={styles.atag}>Equipe</h1>
                 </div>
                 <div>
-                    <h1 className={styles.atag}>Amistosos</h1>
+                    <h1 onClick={() => redirect('amistosos')} className={styles.atag}>Amistosos</h1>
                 </div>
 
             </header>)
@@ -95,7 +95,7 @@ export default function Header() {
                             <h2 onClick={() => redirect('propostas')} className={styles.textSubMenuSideBar}>Propostas</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Avisos</h2>
+                            <h2 onClick={() => redirect('avisos')} className={styles.textSubMenuSideBar}>Avisos</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
                             <h2 onClick={() => redirect('equipe')} className={styles.textSubMenuSideBar}>Equipe</h2>
@@ -104,7 +104,7 @@ export default function Header() {
                             <h2 onClick={() => redirect('mensagensAnonimas')} className={styles.textSubMenuSideBar}>Mensagens Anônimas</h2>
                         </div>
                         <div style={{ borderBottom: "1px solid #C39152" }} className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Amistosos</h2>
+                            <h2 onClick={() => redirect('amistosos')} className={styles.textSubMenuSideBar}>Amistosos</h2>
                         </div>
 
                     </div>

@@ -87,6 +87,46 @@ class _Api {
             description
         })
     }
+
+    public async getMatches() {
+        return this._instance.post('/api/getmatches')
+    }
+
+    public async setMatch(created_by: string, rm: string, ano: string, curso: string, ano_adversario: string, curso_adversario: string, data_jogo: string, periodo: string) {
+        return this._instance.post('/api/creatematch', {
+            created_by,
+            rm,
+            ano,
+            curso,
+            ano_adversario,
+            curso_adversario,
+            data_jogo,
+            periodo
+        })
+    }
+
+    public async aproveMatch(id_match: string) {
+        return this._instance.post('/api/aprovematch', {
+            id_match
+        })
+    }
+
+    public async getAprovedMatches(aprovados: boolean) {
+        return this._instance.post('/api/getaprovedmatch', {
+            aprovados
+        })
+    }
+
+    public async getAvisos() {
+        return this._instance.post('/api/listaviso')
+    }
+
+    public async createAviso(titulo: string, mensagem: string) {
+        return this._instance.post('/api/createaviso', {
+            title: titulo,
+            message: mensagem,
+        })
+    }
 }
 
 const Api = new _Api('');

@@ -59,7 +59,12 @@ export default function HeaderAdmin(props: props) {
                 <div className={styles.subMenuSideBar}>
                     <h2 onClick={props.funcOnClick} className={styles.atag}>Criar Usuário</h2>
                 </div>
-
+                <div className={styles.subMenuSideBar}>
+                    <h2 onClick={props.funcOnClick} className={styles.atag}>Aprovar Amistosos</h2>
+                </div>
+                <div className={styles.subMenuSideBar}>
+                    <h2 onClick={props.funcOnClick} className={styles.atag}>Criar Avisos</h2>
+                </div>
             </header>)
     } else {
         return (
@@ -88,16 +93,12 @@ export default function HeaderAdmin(props: props) {
                         <div className={styles.subMenuSideBar}>
                             <h2 content="criarUsuario" onClick={props.funcOnClick} className={styles.textSubMenuSideBar}>Criar Usuário</h2>
                         </div>
-                        {/* <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Equipe</h2>
+                        <div className={styles.subMenuSideBar}>
+                            <h2 content="criarUsuario" onClick={props.funcOnClick} className={styles.textSubMenuSideBar}>Aprovar Amistosos</h2>
                         </div>
                         <div className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Mensagens Anônimas</h2>
+                            <h2 content="criarUsuario" onClick={props.funcOnClick} className={styles.textSubMenuSideBar}>Criar Avisos</h2>
                         </div>
-                        <div style={{ borderBottom: "1px solid #C39152" }} className={styles.subMenuSideBar}>
-                            <h2 className={styles.textSubMenuSideBar}>Amistosos</h2>
-                        </div> */}
-
                     </div>
                 </div>
                 <header className={styles.headerMobile}>

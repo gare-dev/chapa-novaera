@@ -151,3 +151,148 @@
 
     }
 }
+
+.listAmistososDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    .checkBoxDiv {
+        display: flex;
+        justify-content: center;
+
+        .checkBoxSubdiv {
+            display: flex;
+            justify-content: center;
+
+            .aprovadosText {
+                color: #fff;
+                font-size: 15px;
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+            }
+        }
+    }
+
+    .listAmistosoBoxDiv {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+.divCriarAviso {
+    width: 100%;
+    display: flex;
+    justify-content: cente;
+    align-content: center;
+
+
+    .divInput {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+
+
+
+        .inputCriarAvisoTituloDiv {
+            width: 100%;
+
+
+            .inputCriarAvisoTitulo {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.divCriarAviso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+    .criarAvisoBox {
+        height: 500px;
+        width: 400px;
+        border: #C39152 2px solid;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+
+        .divButtonAviso {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .inputDivAviso {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 90%;
+
+            .subInputDivAviso {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .captionAviso {
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+
+                .textarea {
+                    height: 150px;
+                    width: 97%;
+                    outline: none;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    resize: 'none';
+                    background-color: transparent;
+                    border: 2px solid #C39152;
+                    border-radius: 3px;
+                    color: white;
+                }
+
+                .inputAviso {
+                    width: 97%;
+                    outline: none;
+                    font-size: 15px;
+                    font-family: "Inter", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    background-color: transparent;
+                    border: 2px solid #C39152;
+                    border-radius: 3px;
+                    color: white;
+
+                }
+            }
+        }
+
+
+    }
+}
