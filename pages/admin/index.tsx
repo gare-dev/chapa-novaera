@@ -126,7 +126,7 @@ export default function Admin() {
             }
         } catch (error) {
             if (error instanceof AxiosError) {
-                if (error.response?.data.auto === false) {
+                if (error.response?.data.auth === false) {
                     showAlert("Access Denied", "danger")
                     router.push('/login')
                     return

@@ -5,6 +5,7 @@ import Api from "@/api";
 import { useEffect, useState } from "react";
 import useAlert from "@/hooks/useAlert";
 import { AxiosError } from "axios";
+import LoadingComponent from "@/components/LoadingComponent";
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
@@ -17,11 +18,12 @@ interface Avisos {
 export default function Avisos() {
     const [avisos, setAvisos] = useState<Avisos[]>()
     const { showAlert } = useAlert()
+    const [loading, setLoading] = useState(false)
 
     const handleGetAvisos = async () => {
 
         try {
-
+            setLoading(true)
             const response = await Api.getAvisos()
 
             if (response.data.code === "AVISOS_SUCCESSFULL") {
@@ -35,6 +37,8 @@ export default function Avisos() {
                 }
             }
             showAlert("Erro incomum, avise a chapa NOVA ERA")
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -45,7 +49,7 @@ export default function Avisos() {
     return (
         <>
             <Header />
-
+            {loading && <LoadingComponent />}
             <div className={styles.mainDiv}>
                 {avisos?.map((item, index) => {
                     return (
