@@ -4,6 +4,8 @@ import AlertProvider from "@/context/AlertContext";
 import { locale, loadMessages } from "devextreme/localization";
 import ptMessages from "devextreme/localization/messages/pt.json";
 
+
+
 loadMessages(ptMessages);
 locale("pt");
 

@@ -1,4 +1,4 @@
-import "devextreme/dist/css/dx.material.custom-scheme.css";
+import "devextreme/dist/css/dx.material.blue.light.compact.css";
 import styles from "@/styles/amistosos.module.scss"
 import { Calendar } from "devextreme-react";
 import dynamic from "next/dynamic";
@@ -239,6 +239,7 @@ export default function Amistosos() {
             <Header />
             <div className={styles.calendarDiv}>
                 <Calendar
+
                     value={date}
                     onValueChanged={(e) => setDate(e.value)}
                     className={styles.calendar} />
