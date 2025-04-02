@@ -58,11 +58,11 @@ export const equipe: PropsEquipe[] = [
     {
         role: "Coordenadores Cultura",
         name1: "Samuel Tossi",
-        name2: "Sofia Dias",
+        name2: "",
         imageUrl1: "samuel.jpg",
-        imageUrl2: "sofia.jpg",
+        imageUrl2: "",
         sala1: "3EM",
-        sala2: "3EM"
+        sala2: ""
     },
 ]
 
@@ -88,11 +88,11 @@ export const equipeInteira: PropsEquipe[] = [
     {
         role: "Coordenadores Cultura",
         name1: "Samuel Tossi",
-        name2: "Sofia Dias",
+        name2: "",
         imageUrl1: "samuel.jpg",
-        imageUrl2: "sofia.jpg",
+        imageUrl2: "",
         sala1: "3EM",
-        sala2: "3EM"
+        sala2: ""
     },
     {
         role: "Coordenadores Financeiros",
