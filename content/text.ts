@@ -110,7 +110,7 @@ export const equipeInteira: PropsEquipe[] = [
         imageUrl1: "raissa.jpg",
         imageUrl2: "nophoto.jpg",
         sala1: "3AT",
-        sala2: "3DM"
+        sala2: "3CT"
     },
     {
         role: "Relações Acadêmicas",
