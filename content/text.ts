@@ -109,7 +109,7 @@ export const equipeInteira: PropsEquipe[] = [
         name2: "Daniela Vieira",
         imageUrl1: "raissa.jpg",
         imageUrl2: "nophoto.jpg",
-        sala1: "3AT",
+        sala1: "3CT",
         sala2: "3CT"
     },
     {
