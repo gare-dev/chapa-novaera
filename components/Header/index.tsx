@@ -68,6 +68,9 @@ export default function Header() {
                 <div>
                     <h1 onClick={() => redirect('amistosos')} className={styles.atag}>Amistosos</h1>
                 </div>
+                <div>
+                    <h1 onClick={() => redirect('tabelaManha')} className={styles.atag}>Tabela Manhã</h1>
+                </div>
 
             </header>)
     } else {
@@ -105,6 +108,9 @@ export default function Header() {
                         </div>
                         <div style={{ borderBottom: "1px solid #C39152" }} className={styles.subMenuSideBar}>
                             <h2 onClick={() => redirect('amistosos')} className={styles.textSubMenuSideBar}>Amistosos</h2>
+                        </div>
+                        <div style={{ borderBottom: "1px solid #C39152" }} className={styles.subMenuSideBar}>
+                            <h2 onClick={() => redirect('tabelaManha')} className={styles.textSubMenuSideBar}>Tabela Manhã</h2>
                         </div>
 
                     </div>
